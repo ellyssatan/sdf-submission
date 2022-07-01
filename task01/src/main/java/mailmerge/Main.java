@@ -77,14 +77,22 @@ public class Main {
         // }
 
         for (String w : wordsToReplace) {
-            for (int i = 0; i < dataList.size(); i++) {
-                if (dataList.get(i).equals(w)) {
+            for (int i = 0; i < dataLines.size(); i++) {
+                if (dataLines.get(i).equals(w)) {
                     System.out.printf("%s at index %d\n", w, i);
                 }
             }
         }
         
-        for (String d )
+        for (Object d : dataText) {
+            for (String s : wordsToReplace) {
+                switch (s) {
+                    
+
+                }
+            }
+            
+        }
 
     }
 
