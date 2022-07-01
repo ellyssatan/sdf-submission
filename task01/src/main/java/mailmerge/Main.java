@@ -9,17 +9,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
-    private static List<Object> text;
     private static String data;
     private static String template;
     private static String toReplace;
     private static ArrayList<String> wordsToReplace = new ArrayList<String>();
     static String[] dataText;
     private static List dataList = new ArrayList();
+    private static HashMap<String, Integer> map = new HashMap<String, Integer>();
 
 
     // java your.java.main <csv file> <template file>
@@ -33,7 +34,7 @@ public class Main {
         List<Object> tempText = fileFiller.read(template);
         List<Object> dataLines = fileFiller.read(data);
         // System.out.println(temptxt);
-        // System.out.println(datatxt);
+        // System.out.println(dataLines);
 
 
         
@@ -54,11 +55,27 @@ public class Main {
         for (int i = 0; i < dataLines.size(); i++) {
 
             dataText = ((String) dataLines.get(i)).split(",");     // separate individual fields
-            //System.out.println(Arrays.toString(dataText));
+            // System.out.println(Arrays.toString(dataText));
+            for (String w : wordsToReplace) {                       // loop through fields that need to replace
+                for (int k = 0; k < dataText.length; k++) {         // loop through CSV data
+                    if (dataText[k].equals(w)) {
+                        System.out.printf("%s at index %d\n", w, k);
+                        map.put(w, k);
+                        System.out.println(map);
+                        
+                    }
+                }
+            }
 
             Collections.addAll(dataList, dataText);
         }
-        System.out.println(dataList);
+
+        // List<Object> newFile = tempText.replaceAll(w);
+        // System.out.println(newFile);
+
+
+
+        // System.out.println(dataList);
 
         // System.out.println(wordsToReplace);
         // for (String w : wordsToReplace) {
@@ -77,8 +94,8 @@ public class Main {
         // }
 
         for (String w : wordsToReplace) {
-            for (int i = 0; i < dataLines.size(); i++) {
-                if (dataLines.get(i).equals(w)) {
+            for (int i = 0; i < dataText.length; i++) {
+                if (dataText[i].equals(w)) {
                     System.out.printf("%s at index %d\n", w, i);
                 }
             }
@@ -87,7 +104,7 @@ public class Main {
         for (Object d : dataText) {
             for (String s : wordsToReplace) {
                 switch (s) {
-                    
+
 
                 }
             }

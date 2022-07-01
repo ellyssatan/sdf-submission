@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="client.AppTest" time="0.015" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="client.AppTest" time="0.014" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/18.0.1.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/elly/sdf submission/task02/target/surefire/surefirebooter5524837217297948534.jar /Users/elly/sdf submission/task02/target/surefire 2022-07-01T14-35-17_006-jvmRun1 surefire18006339828930518671tmp surefire_01695299714313410926tmp"/>
+    <property name="sun.java.command" value="/Users/elly/sdf submission/task02/target/surefire/surefirebooter15892601867974219916.jar /Users/elly/sdf submission/task02/target/surefire 2022-07-01T15-01-22_958-jvmRun1 surefire11883553400777953398tmp surefire_09666149356669255765tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/elly/sdf submission/task02/target/test-classes:/Users/elly/sdf submission/task02/target/classes:/Users/elly/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/elly/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/elly/sdf submission/task02/target/surefire/surefirebooter5524837217297948534.jar"/>
+    <property name="surefire.real.class.path" value="/Users/elly/sdf submission/task02/target/surefire/surefirebooter15892601867974219916.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="18.0.1.1+0"/>
@@ -56,5 +56,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="client.AppTest" time="0.001"/>
+  <testcase name="shouldAnswerWithTrue" classname="client.AppTest" time="0.002"/>
 </testsuite>
