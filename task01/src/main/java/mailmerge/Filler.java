@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,20 +12,41 @@ import java.util.stream.Collectors;
 
 public class Filler {
 
-    private static List<Object> text;
-    private static String data;
+    private static LinkedList<String> data = new LinkedList<String>();
+    private static LinkedList<String> text= new LinkedList<String>();
 
 
-    public List<Object> read(String f) throws IOException {
+
+    public LinkedList<String> readCSV(String f) throws IOException {
         FileReader fr = new FileReader(f);
-        BufferedReader br = new BufferedReader(fr);
+		BufferedReader br = new BufferedReader(fr);
 
-        text = br.lines().collect(Collectors.toList());
-        // System.out.println(dataText);
+		String line = br.readLine();
+		while (line != null) {
+			
+			data.add(line);
+			//System.out.println(line);
+			line = br.readLine();
+		}
+		br.close();
+        return data;
+    }
 
-        br.close();
+    public LinkedList<String> readTemp(String f) throws IOException {
+        FileReader fr = new FileReader(f);
+		BufferedReader br = new BufferedReader(fr);
+
+		String line = br.readLine();
+		while (line != null) {
+			
+			text.add(line);
+			//System.out.println(line);
+			line = br.readLine();
+		}
+		br.close();
         return text;
     }
+
 
     public void Replace(String word) throws IOException {
         
